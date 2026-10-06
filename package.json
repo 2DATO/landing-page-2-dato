@@ -16,12 +16,13 @@
     "images:og": "node scripts/generate-og-image.mjs",
     "e2e": "playwright test",
     "e2e:ui": "playwright test --ui",
-    "e2e:a11y": "playwright test tests/e2e/a11y.spec.ts"
+    "e2e:a11y": "playwright test tests/e2e/a11y.spec.ts",
+    "test:e2e": "playwright test"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
     "@eslint/js": "^10.0.1",
-    "@playwright/test": "^1.49.0",
+    "@playwright/test": "1.63.0",
     "eslint": "^10.2.1",
     "globals": "^17.5.0",
     "html-validate": "^10.13.1",
