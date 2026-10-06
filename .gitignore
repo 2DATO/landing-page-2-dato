@@ -21,3 +21,6 @@ design-reference/
 
 # Evidencia local de auditorías (Lighthouse, linkinator, Playwright)
 artifacts/
+
+# Instrucciones locales para Claude Code (no se versionan ni se publican)
+CLAUDE.md
