@@ -17,3 +17,6 @@ playwright/.cache/
 # does not stop Pages from serving the files.
 new_design/
 design-reference/
+
+# Evidencia local de auditorías (Lighthouse, linkinator, Playwright)
+artifacts/
