@@ -1,0 +1,6 @@
+# LF en todas las plataformas (Prettier usa endOfLine: lf)
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.webp binary
+*.ico binary
