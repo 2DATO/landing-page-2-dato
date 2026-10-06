@@ -350,6 +350,24 @@ section {
     }
 }
 
+/* Objetivos táctiles de 44 px (WCAG 2.5.5) solo en pantallas táctiles; el escritorio no cambia. */
+@media (pointer: coarse) {
+    .nav .wordmark,
+    .nav-cta {
+        min-height: 44px;
+    }
+
+    .nav-cta {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .lang-toggle button {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
 /* ========================================================================
    Section: Hero (R3)
    ======================================================================== */
