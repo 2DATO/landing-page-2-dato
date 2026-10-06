@@ -72,6 +72,21 @@ test('archivos de lanzamiento y 404 propia', async () => {
     expect(await missing.text()).not.toContain('GitHub Pages');
 });
 
+test('archivos internos del repo no se publican', async () => {
+    const api = await request.newContext({ baseURL: BASE });
+    for (const path of [
+        '/CLAUDE.md',
+        '/README.md',
+        '/package.json',
+        '/playwright.config.ts',
+        '/tests/e2e/launch.spec.ts',
+        '/scripts/generate-icons.mjs',
+        '/assets/originals/daniel-perico.jpg',
+    ]) {
+        expect((await api.get(path)).status(), path).toBe(404);
+    }
+});
+
 test('página legal: idioma cambia y footer enlaza', async ({ page }, info) => {
     await page.goto(BASE!);
     await page.locator('footer a[href="legal.html#privacidad"]').click();
