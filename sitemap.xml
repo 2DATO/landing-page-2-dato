@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Hreflang alternates omitted: site uses runtime i18n on a single URL. Add per-locale URLs (e.g., /en/, /es/) before reintroducing alternates. -->
     <url>
-        <loc>https://www.2dato.co/</loc>
-        <lastmod>2026-05-01</lastmod>
+        <loc>https://2dato.co/</loc>
+        <lastmod>2026-10-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://2dato.co/legal.html</loc>
+        <lastmod>2026-10-06</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
     </url>
 </urlset>

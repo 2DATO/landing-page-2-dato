@@ -1155,6 +1155,13 @@ section {
     }
 }
 
+/* 3 columnas desbordan a 375 px: los nombres largos fijan el ancho mínimo de 1fr. */
+@media (max-width: 640px) {
+    .inds-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 /* ===== R6: CTA + Footer ===== */
 
 /* --- CTA --- */
@@ -1330,6 +1337,7 @@ section {
 
 .foot-w6 .foot-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     font-size: 13px;
     color: var(--navy-75);

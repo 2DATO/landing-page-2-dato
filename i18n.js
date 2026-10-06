@@ -124,13 +124,14 @@ var CATALOG = {
             'Tell us what’s<br />in the <span class="green">way<span class="punto"></span></span>',
         'cta.lede':
             'Send a brief — current state, target outcome, timeline. We’ll come back within two business days with a scoped proposal, fixed-price where possible.',
-        'cta.book': 'Book a 30-min call',
         'cta.m1': 'response within 2 business days',
         'cta.m2': 'proposals fixed-price where possible',
         'cta.m3': 'NDA on request',
 
         /* Footer */
         'footer.contact': 'Contact',
+        'footer.privacy': 'Privacy',
+        'footer.terms': 'Terms',
         'footer.meta': '© 2026 2DATO · Bogotá → World',
     },
 
@@ -244,13 +245,14 @@ var CATALOG = {
             'Cuéntanos qué está<br />en el <span class="green">camino<span class="punto"></span></span>',
         'cta.lede':
             'Envía un brief — estado actual, objetivo deseado, cronograma. Responderemos en dos días hábiles con una propuesta acotada, precio fijo donde sea posible.',
-        'cta.book': 'Reservar llamada de 30 min',
         'cta.m1': 'respuesta en 2 días hábiles',
         'cta.m2': 'propuestas a precio fijo donde sea posible',
         'cta.m3': 'NDA a pedido',
 
         /* Footer */
         'footer.contact': 'Contacto',
+        'footer.privacy': 'Privacidad',
+        'footer.terms': 'Términos',
         'footer.meta': '© 2026 2DATO · Bogotá → Al mundo',
     },
 };

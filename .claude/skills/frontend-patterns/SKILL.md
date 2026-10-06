@@ -59,7 +59,7 @@ Guidance when editing `index.html`, `styles.css`, `main.js`, or anything in `ass
 - `<title>` under 60 chars, `<meta name="description">` under 160
 - Open Graph: `og:title`, `og:description`, `og:image` (1200×630), `og:url`, `og:type=website`, `og:locale=es_CO`
 - Twitter: `twitter:card=summary_large_image`, title, description, image
-- `<link rel="canonical" href="https://www.2dato.co/">`
+- `<link rel="canonical" href="https://2dato.co/">`
 - `<meta name="theme-color">` matching the dark palette
 - `sitemap.xml` + `robots.txt` at repo root
 

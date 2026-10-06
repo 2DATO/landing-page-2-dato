@@ -9,17 +9,17 @@
             content="2DATO is a data & AI consultancy for organizations that have outgrown spreadsheets. We design data foundations, deploy ML models, and build autonomous agents — end to end. Based in Bogotá, serving LATAM and beyond."
         />
         <meta name="theme-color" content="#0e1c32" />
-        <link rel="canonical" href="https://www.2dato.co/" />
+        <link rel="canonical" href="https://2dato.co/" />
 
         <!-- Open Graph -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.2dato.co/" />
+        <meta property="og:url" content="https://2dato.co/" />
         <meta property="og:title" content="2DATO — Data & AI Consulting | Bogotá, Colombia" />
         <meta
             property="og:description"
             content="Data foundations, ML models, and autonomous agents — end to end. 2DATO is the data & AI consultancy for organizations ready to move beyond spreadsheets."
         />
-        <meta property="og:image" content="https://www.2dato.co/assets/og.png" />
+        <meta property="og:image" content="https://2dato.co/assets/og.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -33,7 +33,7 @@
             name="twitter:description"
             content="Data foundations, ML models, and autonomous agents — end to end. 2DATO is the data & AI consultancy for organizations ready to move beyond spreadsheets."
         />
-        <meta name="twitter:image" content="https://www.2dato.co/assets/og.png" />
+        <meta name="twitter:image" content="https://2dato.co/assets/og.png" />
 
         <!-- JSON-LD structured data: Organization -->
         <script type="application/ld+json">
@@ -42,8 +42,8 @@
                 "@type": "Organization",
                 "name": "2DATO",
                 "alternateName": "2Dato",
-                "url": "https://www.2dato.co/",
-                "logo": "https://www.2dato.co/assets/logo-2dato.png",
+                "url": "https://2dato.co/",
+                "logo": "https://2dato.co/assets/logo-2dato.png",
                 "description": "Data & AI consultancy specialising in data engineering, cloud architecture, machine learning, and autonomous agents. Based in Bogotá, serving Latin America and beyond.",
                 "address": {
                     "@type": "PostalAddress",
@@ -54,20 +54,30 @@
                 "areaServed": ["CO", "LATAM", "Worldwide"],
                 "contactPoint": {
                     "@type": "ContactPoint",
-                    "email": "hello@2dato.com",
+                    "email": "hello@2dato.co",
                     "contactType": "customer service",
                     "availableLanguage": ["English", "Spanish"]
                 },
-                "sameAs": ["https://www.2dato.co/"]
+                "sameAs": ["https://2dato.co/"]
             }
         </script>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
-            rel="stylesheet"
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+            onload="
+                this.onload = null;
+                this.rel = 'stylesheet';
+            "
         />
+        <noscript
+            ><link
+                rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        /></noscript>
         <link
             rel="icon"
             type="image/png"
@@ -96,10 +106,10 @@
             href="assets/favicon-dark-192.png"
             media="(prefers-color-scheme: dark)"
         />
-        <link rel="apple-touch-icon" href="assets/favicon-192.png" />
-        <link rel="alternate" hreflang="en" href="https://www.2dato.co/?lang=en" />
-        <link rel="alternate" hreflang="es" href="https://www.2dato.co/?lang=es" />
-        <link rel="alternate" hreflang="x-default" href="https://www.2dato.co/" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="alternate" hreflang="en" href="https://2dato.co/?lang=en" />
+        <link rel="alternate" hreflang="es" href="https://2dato.co/?lang=es" />
+        <link rel="alternate" hreflang="x-default" href="https://2dato.co/" />
         <link rel="stylesheet" href="styles.css" />
     </head>
 
@@ -156,508 +166,518 @@
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <!-- id="hero" preserved as anchor target for skip-link and wordmark (R2). -->
-        <section id="hero" class="hero">
-            <div class="hero-inner">
-                <div class="punto-mark">
-                    <div class="punto-mark-graphic" aria-hidden="true">
-                        <div class="ring r1"></div>
-                        <div class="ring r2"></div>
-                        <div class="ring r3"></div>
-                        <div class="core"></div>
+        <main id="main">
+            <!-- Hero Section -->
+            <!-- id="hero" preserved as anchor target for skip-link and wordmark (R2). -->
+            <section id="hero" class="hero">
+                <div class="hero-inner">
+                    <div class="punto-mark">
+                        <div class="punto-mark-graphic" aria-hidden="true">
+                            <div class="ring r1"></div>
+                            <div class="ring r2"></div>
+                            <div class="ring r3"></div>
+                            <div class="core"></div>
+                        </div>
+                        <div class="label" data-i18n="hero.mark">El Punto · The mark</div>
                     </div>
-                    <div class="label" data-i18n="hero.mark">El Punto · The mark</div>
+                    <div>
+                        <div class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">
+                            2DATO · Bogotá → Worldwide
+                        </div>
+                        <h1 class="hero-title" data-i18n-html="hero.title">
+                            From a single point<br />of data to
+                            <span class="green">decisions<span class="punto"></span></span
+                            ><br />that
+                            <span class="green">run themselves.</span>
+                        </h1>
+                        <p class="hero-lede" data-i18n="hero.lede">
+                            2DATO is a data &amp; AI consultancy for organizations that have
+                            outgrown spreadsheets and dashboards. We design the data foundation,
+                            deploy the models, and build the agents that run on top — end to end.
+                        </p>
+                        <div class="hero-actions">
+                            <a
+                                href="#contact"
+                                class="btn btn-primary"
+                                id="hero-cta-contact"
+                                data-i18n="nav.cta"
+                            >
+                                Request a proposal →
+                            </a>
+                            <a
+                                href="#capabilities"
+                                class="btn btn-ghost"
+                                id="hero-cta-capabilities"
+                                data-i18n="hero.see"
+                            >
+                                See capabilities
+                            </a>
+                        </div>
+                        <div class="hero-trust">
+                            <span data-i18n="hero.tag">Data-Driven · AI-Powered</span>
+                            <span class="sep" aria-hidden="true"></span>
+                            <span>Azure · AWS · Snowflake · Databricks</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <div class="eyebrow hero-eyebrow" data-i18n="hero.eyebrow">
-                        2DATO · Bogotá → Worldwide
-                    </div>
-                    <h1 class="hero-title" data-i18n-html="hero.title">
-                        From a single point<br />of data to
-                        <span class="green">decisions<span class="punto"></span></span><br />that
-                        <span class="green">run themselves.</span>
-                    </h1>
-                    <p class="hero-lede" data-i18n="hero.lede">
-                        2DATO is a data &amp; AI consultancy for organizations that have outgrown
-                        spreadsheets and dashboards. We design the data foundation, deploy the
-                        models, and build the agents that run on top — end to end.
-                    </p>
-                    <div class="hero-actions">
-                        <a
-                            href="#contact"
-                            class="btn btn-primary"
-                            id="hero-cta-contact"
-                            data-i18n="nav.cta"
-                        >
-                            Request a proposal →
-                        </a>
-                        <a
-                            href="#capabilities"
-                            class="btn btn-ghost"
-                            id="hero-cta-capabilities"
-                            data-i18n="hero.see"
-                        >
-                            See capabilities
-                        </a>
-                    </div>
-                    <div class="hero-trust">
-                        <span data-i18n="hero.tag">Data-Driven · AI-Powered</span>
-                        <span class="sep" aria-hidden="true"></span>
-                        <span>Azure · AWS · Snowflake · Databricks</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Outcomes strip -->
-        <!-- TODO(redesign-plan Res #3): replace placeholder figures (40%, 60%, 3,
+            <!-- Outcomes strip -->
+            <!-- TODO(redesign-plan Res #3): replace placeholder figures (40%, 60%, 3,
              LATAM+) with verified outcomes before the redesign branch merges to main. -->
-        <section class="outcomes" aria-label="Key outcomes">
-            <div class="outcomes-inner">
-                <div class="outcome" data-animate>
-                    <div class="num">40<span class="pct">%</span></div>
-                    <div class="lab" data-i18n="out.1">Faster data retrieval, on average</div>
-                </div>
-                <div class="outcome" data-animate>
-                    <div class="num">60<span class="pct">%</span></div>
-                    <div class="lab" data-i18n="out.2">Reduction in manual processing</div>
-                </div>
-                <div class="outcome" data-animate>
-                    <div class="num">3</div>
-                    <div class="lab" data-i18n="out.3">
-                        Industries delivered — energy, telecom, CPG
+            <section class="outcomes" aria-label="Key outcomes">
+                <div class="outcomes-inner">
+                    <div class="outcome" data-animate>
+                        <div class="num">40<span class="pct">%</span></div>
+                        <div class="lab" data-i18n="out.1">Faster data retrieval, on average</div>
+                    </div>
+                    <div class="outcome" data-animate>
+                        <div class="num">60<span class="pct">%</span></div>
+                        <div class="lab" data-i18n="out.2">Reduction in manual processing</div>
+                    </div>
+                    <div class="outcome" data-animate>
+                        <div class="num">3</div>
+                        <div class="lab" data-i18n="out.3">
+                            Industries delivered — energy, telecom, CPG
+                        </div>
+                    </div>
+                    <div class="outcome" data-animate>
+                        <div class="num">LATAM<span class="pct pct--latam">+</span></div>
+                        <div class="lab" data-i18n="out.4">
+                            Engagements across Latin America &amp; beyond
+                        </div>
                     </div>
                 </div>
-                <div class="outcome" data-animate>
-                    <div class="num">LATAM<span class="pct pct--latam">+</span></div>
-                    <div class="lab" data-i18n="out.4">
-                        Engagements across Latin America &amp; beyond
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Capabilities -->
-        <section id="capabilities" class="caps grid-bg">
-            <div class="container">
-                <div class="caps-head" data-animate>
-                    <div>
-                        <span class="eyebrow" data-i18n="caps.eyebrow">What we do</span>
-                        <h2 class="caps-title" data-i18n-html="caps.title">
-                            Six capabilities,<br />one
-                            <span class="green">accountable</span> partner.
+            <!-- Capabilities -->
+            <section id="capabilities" class="caps grid-bg">
+                <div class="container">
+                    <div class="caps-head" data-animate>
+                        <div>
+                            <span class="eyebrow" data-i18n="caps.eyebrow">What we do</span>
+                            <h2 class="caps-title" data-i18n-html="caps.title">
+                                Six capabilities,<br />one
+                                <span class="green">accountable</span> partner.
+                            </h2>
+                        </div>
+                        <p class="pitch" data-i18n="caps.pitch">
+                            Most consultancies hand you a deck. We hand you a working system. From
+                            data ingestion to autonomous agents, we own the full stack — so insights
+                            become outcomes, not slides.
+                        </p>
+                    </div>
+
+                    <div class="caps-grid">
+                        <article class="cap" data-animate>
+                            <div class="cap-head">
+                                <span class="cap-num" aria-hidden="true">01</span>
+                                <div class="cap-icon" aria-hidden="true">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                    >
+                                        <ellipse cx="12" cy="5" rx="8" ry="3" />
+                                        <path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
+                                        <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 data-i18n="cap1.t">Data Engineering</h3>
+                            <p data-i18n="cap1.d">
+                                Modern lakehouse architectures, ETL/ELT pipelines, and real-time
+                                streaming — the foundation everything else stands on.
+                            </p>
+                            <div class="cap-stack">
+                                <span>Spark</span><span>Databricks</span><span>Snowflake</span
+                                ><span>Airflow</span>
+                            </div>
+                        </article>
+
+                        <article class="cap" data-animate>
+                            <div class="cap-head">
+                                <span class="cap-num" aria-hidden="true">02</span>
+                                <div class="cap-icon" aria-hidden="true">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 data-i18n="cap2.t">Cloud Architecture</h3>
+                            <p data-i18n="cap2.d">
+                                Migration, optimization, and infrastructure-as-code on Azure and
+                                AWS. Repeatable, secure, cost-aware.
+                            </p>
+                            <div class="cap-stack">
+                                <span>Azure</span><span>AWS</span><span>Terraform</span
+                                ><span>K8s</span>
+                            </div>
+                        </article>
+
+                        <article class="cap" data-animate>
+                            <div class="cap-head">
+                                <span class="cap-num" aria-hidden="true">03</span>
+                                <div class="cap-icon" aria-hidden="true">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M12 2a4 4 0 0 1 4 4c0 2-1.5 3.6-3.5 4V13" />
+                                        <circle cx="12" cy="16" r="2" />
+                                        <path d="M12 18v2M8 21h8" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 data-i18n="cap3.t">AI &amp; Machine Learning</h3>
+                            <p data-i18n="cap3.d">
+                                From predictive models to generative AI and autonomous agents —
+                                production-grade MLOps, not notebooks.
+                            </p>
+                            <div class="cap-stack">
+                                <span>MLOps</span><span>GenAI</span><span>RAG</span
+                                ><span>Agents</span>
+                            </div>
+                        </article>
+
+                        <article class="cap" data-animate>
+                            <div class="cap-head">
+                                <span class="cap-num" aria-hidden="true">04</span>
+                                <div class="cap-icon" aria-hidden="true">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                    >
+                                        <line x1="6" y1="20" x2="6" y2="14" />
+                                        <line x1="12" y1="20" x2="12" y2="4" />
+                                        <line x1="18" y1="20" x2="18" y2="10" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 data-i18n="cap4.t">Analytics &amp; BI</h3>
+                            <p data-i18n="cap4.d">
+                                Executive dashboards, KPI frameworks, and real-time analytics that
+                                drive decisions, not vanity metrics.
+                            </p>
+                            <div class="cap-stack">
+                                <span>Power BI</span><span>Tableau</span><span>Looker</span>
+                            </div>
+                        </article>
+
+                        <article class="cap" data-animate>
+                            <div class="cap-head">
+                                <span class="cap-num" aria-hidden="true">05</span>
+                                <div class="cap-icon" aria-hidden="true">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 data-i18n="cap5.t">Data Governance</h3>
+                            <p data-i18n="cap5.d">
+                                Quality frameworks, lineage, and security policies. Trustworthy data
+                                at every layer — accurate, protected, auditable.
+                            </p>
+                            <div class="cap-stack">
+                                <span>Lineage</span><span>Quality</span><span>Compliance</span>
+                            </div>
+                        </article>
+
+                        <article class="cap" data-animate>
+                            <div class="cap-head">
+                                <span class="cap-num" aria-hidden="true">06</span>
+                                <div class="cap-icon" aria-hidden="true">
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 data-i18n="cap6.t">IT Strategy &amp; Consulting</h3>
+                            <p data-i18n="cap6.d">
+                                Technology advisory, architecture reviews, and digital
+                                transformation roadmaps — pragmatic, business-anchored.
+                            </p>
+                            <div class="cap-stack">
+                                <span>Strategy</span><span>Roadmap</span><span>Audit</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Approach -->
+            <section id="approach" class="approach">
+                <div class="container approach-container">
+                    <div class="approach-intro" data-animate>
+                        <span class="eyebrow" data-i18n="app.eyebrow">How we work</span>
+                        <h2 class="approach-title" data-i18n-html="app.title">
+                            A method, not<br />a <span class="green">moonshot</span>.
                         </h2>
+                        <p class="pitch" data-i18n="app.pitch">
+                            Six weeks to first measurable impact. We move in tight, scoped sprints —
+                            every phase ends with something running in your environment.
+                        </p>
                     </div>
-                    <p class="pitch" data-i18n="caps.pitch">
-                        Most consultancies hand you a deck. We hand you a working system. From data
-                        ingestion to autonomous agents, we own the full stack — so insights become
-                        outcomes, not slides.
-                    </p>
+                    <ol class="steps">
+                        <li class="step" data-animate>
+                            <div class="step-num" data-i18n="step1.n">01 / DISCOVERY</div>
+                            <div class="step-body">
+                                <h3 class="step-title" data-i18n="step1.t">
+                                    Diagnose the data, not the symptoms.
+                                </h3>
+                                <p data-i18n="step1.d">
+                                    Two-week deep dive into your data landscape, decision flows, and
+                                    biggest blockers. You leave with a prioritized roadmap — keep it
+                                    whether you continue with us or not.
+                                </p>
+                            </div>
+                            <div class="when" data-i18n="step1.w">~ 2 wks</div>
+                        </li>
+                        <li class="step" data-animate>
+                            <div class="step-num" data-i18n="step2.n">02 / FOUNDATION</div>
+                            <div class="step-body">
+                                <h3 class="step-title" data-i18n="step2.t">Build the spine.</h3>
+                                <p data-i18n="step2.d">
+                                    Lakehouse, pipelines, governance. The unsexy infrastructure
+                                    every AI initiative needs but most companies skip. Done right,
+                                    once.
+                                </p>
+                            </div>
+                            <div class="when" data-i18n="step2.w">4–8 wks</div>
+                        </li>
+                        <li class="step" data-animate>
+                            <div class="step-num" data-i18n="step3.n">03 / INTELLIGENCE</div>
+                            <div class="step-body">
+                                <h3 class="step-title" data-i18n="step3.t">
+                                    Deploy models that earn their keep.
+                                </h3>
+                                <p data-i18n="step3.d">
+                                    Predictive, generative, or agentic — chosen by business case,
+                                    not hype. Each model ships with monitoring, retraining, and a
+                                    clear ROI hypothesis.
+                                </p>
+                            </div>
+                            <div class="when" data-i18n="step3.w">3–6 wks</div>
+                        </li>
+                        <li class="step" data-animate>
+                            <div class="step-num" data-i18n="step4.n">04 / ACTIVATION</div>
+                            <div class="step-body">
+                                <h3 class="step-title" data-i18n="step4.t">
+                                    Wire it into the business.
+                                </h3>
+                                <p data-i18n="step4.d">
+                                    Dashboards, agents, and automations integrated where work
+                                    actually happens — not in a portal nobody opens.
+                                </p>
+                            </div>
+                            <div class="when" data-i18n="step4.w">2–4 wks</div>
+                        </li>
+                        <li class="step" data-animate>
+                            <div class="step-num" data-i18n="step5.n">05 / HANDOFF</div>
+                            <div class="step-body">
+                                <h3 class="step-title" data-i18n="step5.t">
+                                    Leave you stronger than we found you.
+                                </h3>
+                                <p data-i18n="step5.d">
+                                    Documentation, runbooks, and team enablement. Optional ongoing
+                                    support — but you're never locked in.
+                                </p>
+                            </div>
+                            <div class="when" data-i18n="step5.w">ongoing</div>
+                        </li>
+                    </ol>
                 </div>
+            </section>
 
-                <div class="caps-grid">
-                    <article class="cap" data-animate>
-                        <div class="cap-head">
-                            <span class="cap-num" aria-hidden="true">01</span>
-                            <div class="cap-icon" aria-hidden="true">
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                >
-                                    <ellipse cx="12" cy="5" rx="8" ry="3" />
-                                    <path d="M4 5v14c0 1.66 3.58 3 8 3s8-1.34 8-3V5" />
-                                    <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" />
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 data-i18n="cap1.t">Data Engineering</h3>
-                        <p data-i18n="cap1.d">
-                            Modern lakehouse architectures, ETL/ELT pipelines, and real-time
-                            streaming — the foundation everything else stands on.
-                        </p>
-                        <div class="cap-stack">
-                            <span>Spark</span><span>Databricks</span><span>Snowflake</span
-                            ><span>Airflow</span>
-                        </div>
-                    </article>
-
-                    <article class="cap" data-animate>
-                        <div class="cap-head">
-                            <span class="cap-num" aria-hidden="true">02</span>
-                            <div class="cap-icon" aria-hidden="true">
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 data-i18n="cap2.t">Cloud Architecture</h3>
-                        <p data-i18n="cap2.d">
-                            Migration, optimization, and infrastructure-as-code on Azure and AWS.
-                            Repeatable, secure, cost-aware.
-                        </p>
-                        <div class="cap-stack">
-                            <span>Azure</span><span>AWS</span><span>Terraform</span><span>K8s</span>
-                        </div>
-                    </article>
-
-                    <article class="cap" data-animate>
-                        <div class="cap-head">
-                            <span class="cap-num" aria-hidden="true">03</span>
-                            <div class="cap-icon" aria-hidden="true">
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path d="M12 2a4 4 0 0 1 4 4c0 2-1.5 3.6-3.5 4V13" />
-                                    <circle cx="12" cy="16" r="2" />
-                                    <path d="M12 18v2M8 21h8" />
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 data-i18n="cap3.t">AI &amp; Machine Learning</h3>
-                        <p data-i18n="cap3.d">
-                            From predictive models to generative AI and autonomous agents —
-                            production-grade MLOps, not notebooks.
-                        </p>
-                        <div class="cap-stack">
-                            <span>MLOps</span><span>GenAI</span><span>RAG</span><span>Agents</span>
-                        </div>
-                    </article>
-
-                    <article class="cap" data-animate>
-                        <div class="cap-head">
-                            <span class="cap-num" aria-hidden="true">04</span>
-                            <div class="cap-icon" aria-hidden="true">
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                >
-                                    <line x1="6" y1="20" x2="6" y2="14" />
-                                    <line x1="12" y1="20" x2="12" y2="4" />
-                                    <line x1="18" y1="20" x2="18" y2="10" />
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 data-i18n="cap4.t">Analytics &amp; BI</h3>
-                        <p data-i18n="cap4.d">
-                            Executive dashboards, KPI frameworks, and real-time analytics that drive
-                            decisions, not vanity metrics.
-                        </p>
-                        <div class="cap-stack">
-                            <span>Power BI</span><span>Tableau</span><span>Looker</span>
-                        </div>
-                    </article>
-
-                    <article class="cap" data-animate>
-                        <div class="cap-head">
-                            <span class="cap-num" aria-hidden="true">05</span>
-                            <div class="cap-icon" aria-hidden="true">
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 data-i18n="cap5.t">Data Governance</h3>
-                        <p data-i18n="cap5.d">
-                            Quality frameworks, lineage, and security policies. Trustworthy data at
-                            every layer — accurate, protected, auditable.
-                        </p>
-                        <div class="cap-stack">
-                            <span>Lineage</span><span>Quality</span><span>Compliance</span>
-                        </div>
-                    </article>
-
-                    <article class="cap" data-animate>
-                        <div class="cap-head">
-                            <span class="cap-num" aria-hidden="true">06</span>
-                            <div class="cap-icon" aria-hidden="true">
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                >
-                                    <circle cx="9" cy="7" r="4" />
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                                </svg>
-                            </div>
-                        </div>
-                        <h3 data-i18n="cap6.t">IT Strategy &amp; Consulting</h3>
-                        <p data-i18n="cap6.d">
-                            Technology advisory, architecture reviews, and digital transformation
-                            roadmaps — pragmatic, business-anchored.
-                        </p>
-                        <div class="cap-stack">
-                            <span>Strategy</span><span>Roadmap</span><span>Audit</span>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Approach -->
-        <section id="approach" class="approach">
-            <div class="container approach-container">
-                <div class="approach-intro" data-animate>
-                    <span class="eyebrow" data-i18n="app.eyebrow">How we work</span>
-                    <h2 class="approach-title" data-i18n-html="app.title">
-                        A method, not<br />a <span class="green">moonshot</span>.
-                    </h2>
-                    <p class="pitch" data-i18n="app.pitch">
-                        Six weeks to first measurable impact. We move in tight, scoped sprints —
-                        every phase ends with something running in your environment.
-                    </p>
-                </div>
-                <ol class="steps">
-                    <li class="step" data-animate>
-                        <div class="step-num" data-i18n="step1.n">01 / DISCOVERY</div>
-                        <div class="step-body">
-                            <h3 class="step-title" data-i18n="step1.t">
-                                Diagnose the data, not the symptoms.
-                            </h3>
-                            <p data-i18n="step1.d">
-                                Two-week deep dive into your data landscape, decision flows, and
-                                biggest blockers. You leave with a prioritized roadmap — keep it
-                                whether you continue with us or not.
-                            </p>
-                        </div>
-                        <div class="when" data-i18n="step1.w">~ 2 wks</div>
-                    </li>
-                    <li class="step" data-animate>
-                        <div class="step-num" data-i18n="step2.n">02 / FOUNDATION</div>
-                        <div class="step-body">
-                            <h3 class="step-title" data-i18n="step2.t">Build the spine.</h3>
-                            <p data-i18n="step2.d">
-                                Lakehouse, pipelines, governance. The unsexy infrastructure every AI
-                                initiative needs but most companies skip. Done right, once.
-                            </p>
-                        </div>
-                        <div class="when" data-i18n="step2.w">4–8 wks</div>
-                    </li>
-                    <li class="step" data-animate>
-                        <div class="step-num" data-i18n="step3.n">03 / INTELLIGENCE</div>
-                        <div class="step-body">
-                            <h3 class="step-title" data-i18n="step3.t">
-                                Deploy models that earn their keep.
-                            </h3>
-                            <p data-i18n="step3.d">
-                                Predictive, generative, or agentic — chosen by business case, not
-                                hype. Each model ships with monitoring, retraining, and a clear ROI
-                                hypothesis.
-                            </p>
-                        </div>
-                        <div class="when" data-i18n="step3.w">3–6 wks</div>
-                    </li>
-                    <li class="step" data-animate>
-                        <div class="step-num" data-i18n="step4.n">04 / ACTIVATION</div>
-                        <div class="step-body">
-                            <h3 class="step-title" data-i18n="step4.t">
-                                Wire it into the business.
-                            </h3>
-                            <p data-i18n="step4.d">
-                                Dashboards, agents, and automations integrated where work actually
-                                happens — not in a portal nobody opens.
-                            </p>
-                        </div>
-                        <div class="when" data-i18n="step4.w">2–4 wks</div>
-                    </li>
-                    <li class="step" data-animate>
-                        <div class="step-num" data-i18n="step5.n">05 / HANDOFF</div>
-                        <div class="step-body">
-                            <h3 class="step-title" data-i18n="step5.t">
-                                Leave you stronger than we found you.
-                            </h3>
-                            <p data-i18n="step5.d">
-                                Documentation, runbooks, and team enablement. Optional ongoing
-                                support — but you're never locked in.
-                            </p>
-                        </div>
-                        <div class="when" data-i18n="step5.w">ongoing</div>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- Promise -->
-        <section class="promise" aria-labelledby="promise-eyebrow">
-            <div class="promise-inner" data-animate>
-                <span id="promise-eyebrow" class="eyebrow" data-i18n="promise.eyebrow"
-                    >Our promise</span
-                >
-                <blockquote data-i18n-html="promise.quote">
-                    &ldquo;Every organization holds <span class="green">hidden potential</span> in
-                    its data<span class="punto" aria-hidden="true"></span> waiting to be
-                    discovered.&rdquo;
-                </blockquote>
-                <div class="attribution" data-i18n="promise.attr">— 2DATO · Brand Manifesto</div>
-            </div>
-        </section>
-
-        <!-- Industries -->
-        <section id="industries" class="inds">
-            <div class="container">
-                <div class="inds-head" data-animate>
-                    <span class="eyebrow" data-i18n="ind.eyebrow">Industries</span>
-                    <h2 class="inds-title" data-i18n="ind.title">Sectors we serve.</h2>
-                </div>
-                <ul class="inds-grid">
-                    <li class="ind" data-animate>
-                        <svg
-                            class="ind-icon"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
+            <!-- Promise -->
+            <section class="promise" aria-labelledby="promise-eyebrow">
+                <div class="promise-inner" data-animate>
+                    <span id="promise-eyebrow" class="eyebrow" data-i18n="promise.eyebrow"
+                        >Our promise</span
+                    >
+                    <blockquote data-i18n-html="promise.quote">
+                        &ldquo;Every organization holds
+                        <span class="green">hidden potential</span> in its data<span
+                            class="punto"
                             aria-hidden="true"
-                        >
-                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                        </svg>
-                        <div class="name" data-i18n="ind.energy">Energy</div>
-                    </li>
-                    <li class="ind" data-animate>
-                        <svg
-                            class="ind-icon"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            aria-hidden="true"
-                        >
-                            <path
-                                d="M5 12.55a11 11 0 0 1 14 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.94 0M12 20h.01"
-                            />
-                        </svg>
-                        <div class="name" data-i18n="ind.tel">Telecom</div>
-                    </li>
-                    <li class="ind" data-animate>
-                        <svg
-                            class="ind-icon"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            aria-hidden="true"
-                        >
-                            <path
-                                d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"
-                            />
-                        </svg>
-                        <div class="name" data-i18n="ind.cpg">CPG &amp; Retail</div>
-                    </li>
-                    <li class="ind" data-animate>
-                        <svg
-                            class="ind-icon"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            aria-hidden="true"
-                        >
-                            <rect x="3" y="3" width="18" height="18" rx="2" />
-                            <path d="M3 9h18M9 21V9" />
-                        </svg>
-                        <div class="name" data-i18n="ind.fin">Financial Services</div>
-                    </li>
-                    <li class="ind" data-animate>
-                        <svg
-                            class="ind-icon"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            aria-hidden="true"
-                        >
-                            <path
-                                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"
-                            />
-                        </svg>
-                        <div class="name" data-i18n="ind.health">Healthcare</div>
-                    </li>
-                    <li class="ind" data-animate>
-                        <svg
-                            class="ind-icon"
-                            width="32"
-                            height="32"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.5"
-                            aria-hidden="true"
-                        >
-                            <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4" />
-                        </svg>
-                        <div class="name" data-i18n="ind.man">Manufacturing</div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Team -->
-        <section id="team" class="team-w6">
-            <div class="container">
-                <div class="team-head" data-animate>
-                    <div>
-                        <span class="eyebrow" data-i18n="team.eyebrow">The team</span>
-                        <h2 class="team-title" data-i18n="team.title">Senior engineers.</h2>
+                        ></span>
+                        waiting to be discovered.&rdquo;
+                    </blockquote>
+                    <div class="attribution" data-i18n="promise.attr">
+                        — 2DATO · Brand Manifesto
                     </div>
-                    <p class="tagline" data-i18n="team.tag">
-                        A small, hand-picked team. Every project led directly by the people who
-                        built 2DATO.
-                    </p>
                 </div>
-                <div class="team-grid">
-                    <!-- <article class="tm">
+            </section>
+
+            <!-- Industries -->
+            <section id="industries" class="inds">
+                <div class="container">
+                    <div class="inds-head" data-animate>
+                        <span class="eyebrow" data-i18n="ind.eyebrow">Industries</span>
+                        <h2 class="inds-title" data-i18n="ind.title">Sectors we serve.</h2>
+                    </div>
+                    <ul class="inds-grid">
+                        <li class="ind" data-animate>
+                            <svg
+                                class="ind-icon"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                aria-hidden="true"
+                            >
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                            </svg>
+                            <div class="name" data-i18n="ind.energy">Energy</div>
+                        </li>
+                        <li class="ind" data-animate>
+                            <svg
+                                class="ind-icon"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M5 12.55a11 11 0 0 1 14 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.94 0M12 20h.01"
+                                />
+                            </svg>
+                            <div class="name" data-i18n="ind.tel">Telecom</div>
+                        </li>
+                        <li class="ind" data-animate>
+                            <svg
+                                class="ind-icon"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"
+                                />
+                            </svg>
+                            <div class="name" data-i18n="ind.cpg">CPG &amp; Retail</div>
+                        </li>
+                        <li class="ind" data-animate>
+                            <svg
+                                class="ind-icon"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                aria-hidden="true"
+                            >
+                                <rect x="3" y="3" width="18" height="18" rx="2" />
+                                <path d="M3 9h18M9 21V9" />
+                            </svg>
+                            <div class="name" data-i18n="ind.fin">Financial Services</div>
+                        </li>
+                        <li class="ind" data-animate>
+                            <svg
+                                class="ind-icon"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"
+                                />
+                            </svg>
+                            <div class="name" data-i18n="ind.health">Healthcare</div>
+                        </li>
+                        <li class="ind" data-animate>
+                            <svg
+                                class="ind-icon"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                aria-hidden="true"
+                            >
+                                <path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4" />
+                            </svg>
+                            <div class="name" data-i18n="ind.man">Manufacturing</div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Team -->
+            <section id="team" class="team-w6">
+                <div class="container">
+                    <div class="team-head" data-animate>
+                        <div>
+                            <span class="eyebrow" data-i18n="team.eyebrow">The team</span>
+                            <h2 class="team-title" data-i18n="team.title">Senior engineers.</h2>
+                        </div>
+                        <p class="tagline" data-i18n="team.tag">
+                            A small, hand-picked team. Every project led directly by the people who
+                            built 2DATO.
+                        </p>
+                    </div>
+                    <div class="team-grid">
+                        <!-- <article class="tm">
                         <div class="tm-avatar">
                             <picture>
                                 <source srcset="assets/daniel-perico.webp" type="image/webp" />
@@ -679,119 +699,115 @@
                             </p>
                         </div>
                     </article> -->
-                    <article class="tm" data-animate>
-                        <div class="tm-avatar">
-                            <picture>
-                                <source srcset="assets/tomas-cardenas.webp" type="image/webp" />
-                                <img
-                                    src="assets/tomas-cardenas.jpg"
-                                    alt="Tomás Cárdenas"
-                                    width="400"
-                                    height="400"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                            </picture>
-                        </div>
-                        <div>
-                            <h3 class="tm-name">Tomás Cárdenas</h3>
-                            <p class="tm-role" data-i18n="team.r2">Data Scientist</p>
-                            <p class="tm-skills">Python · ML · Forecasting · Power BI · Tableau</p>
-                        </div>
-                    </article>
-                    <article class="tm" data-animate>
-                        <div class="tm-avatar">
-                            <picture>
-                                <source srcset="assets/david-ardila.webp" type="image/webp" />
-                                <img
-                                    src="assets/david-ardila.jpg"
-                                    alt="David Ardila"
-                                    width="400"
-                                    height="400"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                            </picture>
-                        </div>
-                        <div>
-                            <h3 class="tm-name">David Ardila</h3>
-                            <p class="tm-role" data-i18n="team.r3">Power BI Engineer</p>
-                            <p class="tm-skills">SQL · Azure · Databricks · Snowflake · BI</p>
-                        </div>
-                    </article>
+                        <article class="tm" data-animate>
+                            <div class="tm-avatar">
+                                <picture>
+                                    <source srcset="assets/tomas-cardenas.webp" type="image/webp" />
+                                    <img
+                                        src="assets/tomas-cardenas.jpg"
+                                        alt="Tomás Cárdenas"
+                                        width="400"
+                                        height="400"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </picture>
+                            </div>
+                            <div>
+                                <h3 class="tm-name">Tomás Cárdenas</h3>
+                                <p class="tm-role" data-i18n="team.r2">Data Scientist</p>
+                                <p class="tm-skills">
+                                    Python · ML · Forecasting · Power BI · Tableau
+                                </p>
+                            </div>
+                        </article>
+                        <article class="tm" data-animate>
+                            <div class="tm-avatar">
+                                <picture>
+                                    <source srcset="assets/david-ardila.webp" type="image/webp" />
+                                    <img
+                                        src="assets/david-ardila.jpg"
+                                        alt="David Ardila"
+                                        width="400"
+                                        height="400"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </picture>
+                            </div>
+                            <div>
+                                <h3 class="tm-name">David Ardila</h3>
+                                <p class="tm-role" data-i18n="team.r3">Power BI Engineer</p>
+                                <p class="tm-skills">SQL · Azure · Databricks · Snowflake · BI</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="contact" class="cta">
-            <div class="cta-card" data-animate>
-                <div class="cta-grid">
-                    <div>
-                        <span class="eyebrow" data-i18n="cta.eyebrow">Get started</span>
-                        <!-- R7 i18n contract: dictionary value for `cta.title` MUST keep the
+            <section id="contact" class="cta">
+                <div class="cta-card" data-animate>
+                    <div class="cta-grid">
+                        <div>
+                            <span class="eyebrow" data-i18n="cta.eyebrow">Get started</span>
+                            <!-- R7 i18n contract: dictionary value for `cta.title` MUST keep the
                              `<span class="green">…<span class="punto"></span></span>` tree
                              intact so the green dot stays painted on language switch. -->
-                        <h2 data-i18n-html="cta.title">
-                            Tell us what's<br />in the
-                            <span class="green">way<span class="punto"></span></span>
-                        </h2>
-                        <p class="lede" data-i18n="cta.lede">
-                            Send a brief — current state, target outcome, timeline. We'll come back
-                            within two business days with a scoped proposal, fixed-price where
-                            possible.
-                        </p>
-                        <div class="cta-actions">
-                            <!-- TODO(redesign-plan Res #2): hello@2dato.com mailbox to be
-                                 provisioned out-of-band; mailto will bounce until then. -->
-                            <a
-                                href="mailto:hello@2dato.com"
-                                class="btn btn-primary"
-                                data-i18n="nav.cta"
-                                >Request a proposal →</a
-                            >
-                            <!-- TODO(R10): wire to Calendly/Cal.com booking URL; href="#" is
-                                 a placeholder copied verbatim from the W6 prototype. -->
-                            <a href="#" class="btn btn-ghost" data-i18n="cta.book"
-                                >Book a 30-min call</a
-                            >
+                            <h2 data-i18n-html="cta.title">
+                                Tell us what's<br />in the
+                                <span class="green">way<span class="punto"></span></span>
+                            </h2>
+                            <p class="lede" data-i18n="cta.lede">
+                                Send a brief — current state, target outcome, timeline. We'll come
+                                back within two business days with a scoped proposal, fixed-price
+                                where possible.
+                            </p>
+                            <div class="cta-actions">
+                                <a
+                                    href="mailto:hello@2dato.co"
+                                    class="btn btn-primary"
+                                    data-i18n="nav.cta"
+                                    >Request a proposal →</a
+                                >
+                            </div>
                         </div>
-                    </div>
-                    <!-- "Console" sidebar. Decorative glyphs (›, #) live in
+                        <!-- "Console" sidebar. Decorative glyphs (›, #) live in
                          `aria-hidden` spans so SR users only hear the actual values.
                          Email, URL and city are real links so they can be acted on. -->
-                    <ul class="cta-side">
-                        <li>
-                            <span class="l" aria-hidden="true">›</span>
-                            <a href="mailto:hello@2dato.com" class="v">hello@2dato.com</a>
-                        </li>
-                        <li>
-                            <span class="l" aria-hidden="true">›</span>
-                            <a href="https://www.2dato.co" class="v">www.2dato.co</a>
-                        </li>
-                        <li>
-                            <span class="l" aria-hidden="true">›</span>
-                            <span class="v">Bogotá, Colombia</span>
-                        </li>
-                        <li class="cta-side-meta">
-                            <span class="l" aria-hidden="true">#</span>
-                            <span class="c" data-i18n="cta.m1"
-                                >response within 2 business days</span
-                            >
-                        </li>
-                        <li>
-                            <span class="l" aria-hidden="true">#</span>
-                            <span class="c" data-i18n="cta.m2"
-                                >proposals fixed-price where possible</span
-                            >
-                        </li>
-                        <li>
-                            <span class="l" aria-hidden="true">#</span>
-                            <span class="c" data-i18n="cta.m3">NDA on request</span>
-                        </li>
-                    </ul>
+                        <ul class="cta-side">
+                            <li>
+                                <span class="l" aria-hidden="true">›</span>
+                                <a href="mailto:hello@2dato.co" class="v">hello@2dato.co</a>
+                            </li>
+                            <li>
+                                <span class="l" aria-hidden="true">›</span>
+                                <a href="https://2dato.co" class="v">2dato.co</a>
+                            </li>
+                            <li>
+                                <span class="l" aria-hidden="true">›</span>
+                                <span class="v">Bogotá, Colombia</span>
+                            </li>
+                            <li class="cta-side-meta">
+                                <span class="l" aria-hidden="true">#</span>
+                                <span class="c" data-i18n="cta.m1"
+                                    >response within 2 business days</span
+                                >
+                            </li>
+                            <li>
+                                <span class="l" aria-hidden="true">#</span>
+                                <span class="c" data-i18n="cta.m2"
+                                    >proposals fixed-price where possible</span
+                                >
+                            </li>
+                            <li>
+                                <span class="l" aria-hidden="true">#</span>
+                                <span class="c" data-i18n="cta.m3">NDA on request</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </main>
 
         <footer class="foot-w6">
             <div class="foot-inner">
@@ -815,6 +831,8 @@
                     <a href="#industries" data-i18n="nav.ind">Industries</a>
                     <a href="#team" data-i18n="nav.team">Team</a>
                     <a href="#contact" data-i18n="footer.contact">Contact</a>
+                    <a href="legal.html#privacidad" data-i18n="footer.privacy">Privacy</a>
+                    <a href="legal.html#terminos" data-i18n="footer.terms">Terms</a>
                 </nav>
                 <div class="foot-meta" data-i18n="footer.meta">© 2026 2DATO · Bogotá → World</div>
             </div>

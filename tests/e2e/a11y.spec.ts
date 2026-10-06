@@ -5,7 +5,7 @@ const AXE_TAGS = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'];
 
 /**
  * Filter axe results to only serious and critical violations.
- * Moderate findings (e.g. landmark-one-main) are known and non-blocking.
+ * Moderate findings are non-blocking.
  */
 function seriousAndCritical(violations: Awaited<ReturnType<AxeBuilder['analyze']>>['violations']) {
     return violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');

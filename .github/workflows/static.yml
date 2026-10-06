@@ -1,5 +1,5 @@
 # Deploy static content to GitHub Pages
-# - push to main: build + deploy to https://www.2dato.co
+# - push to main: build + deploy to https://2dato.co
 # - pull_request to main or feat/redesign: dry-run build only (no deploy) to catch artifact errors before merge
 # - workflow_dispatch: manual deploy from the Actions tab
 name: Deploy static content to Pages

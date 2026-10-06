@@ -1,6 +1,6 @@
 ---
 name: deployment-patterns
-description: GitHub Pages deployment, Actions workflows, and DNS/CNAME handling for www.2dato.co
+description: GitHub Pages deployment, Actions workflows, and DNS/CNAME handling for 2dato.co
 type: project-skill
 ---
 
@@ -10,10 +10,10 @@ How this repo ships to production.
 
 ## Production surface
 
-- **URL:** https://www.2dato.co
+- **URL:** https://2dato.co
 - **Host:** GitHub Pages (project page with custom domain via `CNAME` file)
 - **CDN/TLS:** GitHub-managed (Fastly + Let's Encrypt)
-- **DNS:** `www.2dato.co` → `danielpesa7.github.io` CNAME (apex handled at registrar)
+- **DNS:** apex `2dato.co` → registros A de GitHub Pages (185.199.108–111.153); `www.2dato.co` CNAME → `danielpesa7.github.io` (GitHub redirige www → apex)
 
 ## Current workflows (state as of 2026-04-22)
 
@@ -50,7 +50,7 @@ Before merging to `main`:
 After merge:
 
 1. Actions tab: confirm Pages deploy job finished green
-2. `curl -I https://www.2dato.co/` — expect `200` and the new `Last-Modified`
+2. `curl -I https://2dato.co/` — expect `200` and the new `Last-Modified`
 3. Smoke the live URL in browser: hero renders, fonts load, no 404s in console, mobile nav opens
 
 ## Rollback

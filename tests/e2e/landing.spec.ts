@@ -103,14 +103,14 @@ test('hero CTA buttons have correct hrefs', async ({ page }) => {
     expect(capHref).toBe('#capabilities');
 });
 
-test('CTA card contains a mailto link for hello@2dato.com', async ({ page }) => {
+test('CTA card contains a mailto link for hello@2dato.co', async ({ page }) => {
     await page.goto('/');
 
-    const mailtoLink = page.locator('#contact a[href^="mailto:hello@2dato.com"]').first();
+    const mailtoLink = page.locator('#contact a[href^="mailto:hello@2dato.co"]').first();
     await expect(mailtoLink).toBeVisible();
 
     const href = await mailtoLink.getAttribute('href');
-    expect(href).toMatch(/^mailto:hello@2dato\.com/);
+    expect(href).toMatch(/^mailto:hello@2dato.co$/);
 });
 
 test('lang toggle persists ES across page reload', async ({ page }) => {
