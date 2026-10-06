@@ -13,7 +13,7 @@ How this repo ships to production.
 - **URL:** https://2dato.co
 - **Host:** GitHub Pages (project page with custom domain via `CNAME` file)
 - **CDN/TLS:** GitHub-managed (Fastly + Let's Encrypt)
-- **DNS:** apex `2dato.co` → registros A de GitHub Pages (185.199.108–111.153); `www.2dato.co` CNAME → `danielpesa7.github.io` (GitHub redirige www → apex)
+- **DNS:** apex `2dato.co` → registros A de GitHub Pages (185.199.108–111.153); `www.2dato.co` CNAME → `2dato.github.io` (GitHub redirige www → apex)
 
 ## Current workflows (state as of 2026-04-22)
 
