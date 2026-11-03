@@ -24,7 +24,7 @@ jobs:
           cache: npm
       - run: npm ci
       # Sin descarga de Chromium: Playwright usa el Google Chrome que trae ubuntu-latest (channel: chrome).
-      - name: Install ffmpeg (video: retain-on-failure)
+      - name: Install ffmpeg (videos de retain-on-failure)
         run: npx playwright install ffmpeg
       - name: Run Playwright
         env:
