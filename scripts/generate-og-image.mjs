@@ -153,7 +153,7 @@ const html = `<!doctype html>
 </html>`;
 
 console.log('[og] launching chromium...');
-const browser = await chromium.launch();
+const browser = await chromium.launch({ channel: 'chrome' });
 const context = await browser.newContext({
     viewport: { width: WIDTH, height: HEIGHT },
     deviceScaleFactor: DPR,

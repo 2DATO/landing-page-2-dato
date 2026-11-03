@@ -23,8 +23,9 @@ jobs:
           node-version: '20'
           cache: npm
       - run: npm ci
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+      # Sin descarga de Chromium: Playwright usa el Google Chrome que trae ubuntu-latest (channel: chrome).
+      - name: Install ffmpeg (video: retain-on-failure)
+        run: npx playwright install ffmpeg
       - name: Run Playwright
         env:
           CI: 'true'

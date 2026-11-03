@@ -22,7 +22,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
     "@eslint/js": "^10.0.1",
-    "@playwright/test": "1.63.0",
+    "@playwright/test": "1.64.1",
     "eslint": "^10.2.1",
     "globals": "^17.5.0",
     "html-validate": "^10.13.1",

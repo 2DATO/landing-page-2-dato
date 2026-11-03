@@ -12,6 +12,8 @@ export default defineConfig({
     workers: process.env.CI ? 2 : undefined,
     reporter: [['html', { open: 'never' }], ['list']],
     use: {
+        // Chrome del sistema (se actualiza solo), nunca el Chromium que descarga Playwright: si falta, falla visible.
+        channel: 'chrome',
         baseURL,
         trace: 'retain-on-failure',
         screenshot: 'only-on-failure',
