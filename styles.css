@@ -60,6 +60,17 @@ body {
     text-rendering: optimizelegibility;
 }
 
+/* Cortes de línea equilibrados: el mismo título cambia de largo entre ES y EN. */
+h1,
+h2,
+h3 {
+    text-wrap: balance;
+}
+
+p {
+    text-wrap: pretty;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -557,12 +568,6 @@ section {
     .punto-mark .core::after {
         opacity: 0;
     }
-
-    [data-animate] {
-        opacity: 1;
-        transform: none;
-        transition: none;
-    }
 }
 
 /* ========================================================================
@@ -1021,14 +1026,6 @@ section {
     transform: translateY(14px);
 }
 
-.ind[data-animate].in-view {
-    transform: none;
-}
-
-.ind:nth-child(even)[data-animate].in-view {
-    transform: translateY(16px);
-}
-
 .ind-icon {
     width: 32px;
     height: 32px;
@@ -1407,21 +1404,36 @@ section {
 }
 
 /* ===================================================================
-   Scroll reveal — staggered via inline transition-delay set in main.js.
-   [data-animate] base/reduced-motion rules already existed (styles.css
-   R3); this just gives the attribute something to animate.
+   Scroll reveal — se dispara una vez (IntersectionObserver en main.js).
+   Visible por defecto: el estado oculto solo existe si main.js puso
+   html.reveal, que no lo hace con movimiento reducido. No se usa la
+   animación guiada por scroll (view()) porque deja bloques translúcidos
+   en reposo al pie de la pantalla. Usa `translate` en lugar de `transform`
+   para no pisar el desfase en damero de .ind; --reveal-delay escalona
+   solo la entrada, no los hovers.
    =================================================================== */
-[data-animate] {
-    opacity: 0;
-    transform: translateY(24px);
-    transition:
-        opacity 0.6s ease,
-        transform 0.6s ease;
-}
+@media (prefers-reduced-motion: no-preference) {
+    /* Transición solo en el estado .in-view: ocultar es instantáneo, solo la entrada se anima. */
+    html.reveal [data-animate].in-view {
+        transition:
+            opacity 0.6s ease var(--reveal-delay, 0s),
+            translate 0.6s ease var(--reveal-delay, 0s);
+    }
 
-[data-animate].in-view {
-    opacity: 1;
-    transform: none;
+    /* La regla anterior pisa las transiciones de hover de .cap y .ind; se reponen aquí. */
+    html.reveal :is(.cap, .ind)[data-animate].in-view {
+        transition:
+            opacity 0.6s ease var(--reveal-delay, 0s),
+            translate 0.6s ease var(--reveal-delay, 0s),
+            background 0.2s ease,
+            border-color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    html.reveal [data-animate]:not(.in-view) {
+        opacity: 0;
+        translate: 0 24px;
+    }
 }
 
 /* ===================================================================
