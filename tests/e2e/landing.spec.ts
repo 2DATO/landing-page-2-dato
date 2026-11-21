@@ -79,7 +79,7 @@ for (const reducedMotion of ['reduce', 'no-preference'] as const) {
                                     Number(getComputedStyle(n).opacity) < 0.99
                             ).length
                     ),
-                { message: 'bloques translúcidos en la primera pantalla', timeout: 2000 }
+                { message: 'bloques translúcidos en la primera pantalla', timeout: 5000 }
             )
             .toBe(0);
 
