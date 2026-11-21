@@ -1,69 +1,53 @@
 /* ===================================================================
    2Dato Landing Page — Main JavaScript
-   Smooth-scroll offset and anchor navigation.
+   El desplazamiento a anclas lo hace el navegador (scroll-behavior +
+   scroll-padding-top en styles.css). Aquí: altura del nav y la animación
+   de entrada.
    =================================================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
-    initSmoothScroll();
-    initScrollReveal();
-});
+/* Altura real del nav para scroll-padding-top; cambia con el idioma, el
+   ancho y la carga de fuentes, por eso se observa el elemento y no el resize. */
+const nav = document.querySelector('nav.nav');
+if (nav) {
+    new ResizeObserver(() =>
+        document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px')
+    ).observe(nav);
+}
 
-/* --- Scroll Reveal --- */
-function initScrollReveal() {
-    const items = document.querySelectorAll('[data-animate]');
-    if (!items.length) return;
-
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return;
-
-    const groups = new Map();
-    items.forEach((el) => {
-        const siblings = groups.get(el.parentElement) || [];
-        el.style.transitionDelay = `${Math.min(siblings.length, 6) * 60}ms`;
-        siblings.push(el);
-        groups.set(el.parentElement, siblings);
-    });
-
+/* Animación de entrada, una sola vez por bloque. El contenido es visible por
+   defecto; solo se oculta (html.reveal) si este script corre y el usuario no
+   pide movimiento reducido. Lo que ya está en pantalla al cargar no se anima,
+   para no hacerlo parpadear. Con #ancla en la URL no se anima nada: el salto
+   ocurre después de este script y esconderíamos la sección de destino. */
+const revealItems = document.querySelectorAll('[data-animate]');
+if (
+    revealItems.length &&
+    !location.hash &&
+    matchMedia('(prefers-reduced-motion: no-preference)').matches
+) {
     const observer = new IntersectionObserver(
-        (entries, obs) => {
+        (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('in-view');
-                    obs.unobserve(entry.target);
+                    observer.unobserve(entry.target);
                 }
             });
         },
         { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
     );
 
-    items.forEach((el) => observer.observe(el));
-}
-
-/* --- Smooth Scroll Offset + Anchor Navigation --- */
-function initSmoothScroll() {
-    const nav = document.querySelector('nav.nav');
-
-    if (nav) {
-        const update = () =>
-            document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
-        update();
-        window.addEventListener('resize', update, { passive: true });
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener('click', (e) => {
-            const targetId = anchor.getAttribute('href');
-            if (targetId === '#') return;
-            const target = document.querySelector(targetId);
-            if (target) {
-                e.preventDefault();
-                const navHeight = nav ? nav.offsetHeight : 0;
-                const y = target.getBoundingClientRect().top + window.scrollY - navHeight;
-                const prefersReduced = window.matchMedia(
-                    '(prefers-reduced-motion: reduce)'
-                ).matches;
-                window.scrollTo({ top: y, behavior: prefersReduced ? 'instant' : 'smooth' });
-            }
-        });
+    const siblingsSeen = new Map();
+    revealItems.forEach((el) => {
+        if (el.getBoundingClientRect().top < window.innerHeight) {
+            el.classList.add('in-view');
+            return;
+        }
+        const n = siblingsSeen.get(el.parentElement) || 0;
+        siblingsSeen.set(el.parentElement, n + 1);
+        el.style.setProperty('--reveal-delay', `${Math.min(n, 6) * 60}ms`);
+        observer.observe(el);
     });
+
+    document.documentElement.classList.add('reveal');
 }

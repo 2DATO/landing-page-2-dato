@@ -360,7 +360,14 @@ function setLang(lang) {
     } catch (_e) {
         /* storage blocked */
     }
-    applyLang(lang);
+    /* Fundido nativo al cambiar de idioma; sin soporte o con movimiento reducido, cambio directo. */
+    if (document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.startViewTransition(function () {
+            applyLang(lang);
+        });
+    } else {
+        applyLang(lang);
+    }
 }
 
 /* ------------------------------------------------------------------
